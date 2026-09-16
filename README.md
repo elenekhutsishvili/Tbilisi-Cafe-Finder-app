@@ -1,2 +1,2 @@
-# fix-my-city-app
-A citizen problem-reporting application that allows residents to report local issues using photos and GPS locations, track their status, and view resolved and unresolved problems on a public map.
+# Tbilisi-Cafe-Finder-app
+The Tbilisi Café Finder is a web-based application designed to help users discover cafés in Tbilisi based on their preferences, location, price range, rating, and available amenities.
