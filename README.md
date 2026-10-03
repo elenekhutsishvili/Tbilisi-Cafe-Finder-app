@@ -10,9 +10,13 @@ based on their preferences and location.
 ## Team
 
 Salome Sanadiradze
+
 Elene Khutsishvili
+
 Tekla Tvildiani
+
 Mariam Merabishvili
+
 Nino Khardziani
 
 ## Planned Technologies
