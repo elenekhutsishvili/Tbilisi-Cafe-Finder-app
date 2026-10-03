@@ -17,6 +17,9 @@ Nino Khardziani
 
 ## Planned Technologies
 Frontend: React
+
 Backend: Flask
+
 Database: PostgreSQL
+
 Maps: Leaflet + OpenStreetMap
