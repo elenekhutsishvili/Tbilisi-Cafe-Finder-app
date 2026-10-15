@@ -1,20 +1,17 @@
+import { Link } from "react-router";
 
-function Navbar(){
-
-return(
-    
-    <nav> 
-        <ul> 
-            <li><a href="#home">Home</a></li> 
-            <li><a href="#about">About</a></li> 
-            <li><a href="#contact">Contact</a></li> 
-            <li><a href="#cafes">Browse Cafés</a></li>
-
-        </ul> 
+function Navbar() {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/cafe">Browse Café</Link></li>
+        <li><Link to="/login">Login</Link></li>
+        <li><Link to="/register">Sign Up</Link></li>
+        <li><Link to="/favorites">Favorites</Link></li>
+      </ul>
     </nav>
-);
-
+  );
 }
-
 
 export default Navbar;
