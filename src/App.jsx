@@ -10,7 +10,6 @@ import Favorites from "./pages/Favorites";
 import Preference from "./pages/Preference";
 import Profile from "./pages/Profile";
 import MapPage from "./pages/Map";
-import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -24,7 +23,6 @@ function App() {
       <Route path="/preference" element={<Preference />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/map" element={<MapPage />} />
-      <Route path="/admin" element={<Admin />} />
     </Routes>
   );
 }
