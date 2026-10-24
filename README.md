@@ -20,7 +20,7 @@ Mariam Merabishvili
 Nino Khardziani
 
 ## Planned Technologies
-Frontend: React
+Frontend: React + JavaScript
 
 Backend: Django + DRF
 
