@@ -4,14 +4,12 @@ import Footer from "../components/Footer";
 function Favorites() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Your Favorite Cafés</h1>
-        <p>View the cafés you have saved for later.</p>
+        <h2>Your Favorite Cafés</h2>
+        <p>Users' saved favorite cafes will be displayed here</p>
       </main>
 
-      <Footer />
     </div>
   );
 }

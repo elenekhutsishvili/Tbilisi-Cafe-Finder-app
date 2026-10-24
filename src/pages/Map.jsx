@@ -4,14 +4,11 @@ import Footer from "../components/Footer";
 function MapPage() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Find Cafés on the Map</h1>
-        <p>Explore café locations around Tbilisi.</p>
+        <p>This page will display a map of cafés in Tbilisi.</p>
       </main>
 
-      <Footer />
     </div>
   );
 }

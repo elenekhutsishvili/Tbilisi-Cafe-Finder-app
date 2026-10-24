@@ -4,14 +4,13 @@ import Footer from "../components/Footer";
 function Preference() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Your Café Preferences</h1>
-        <p>Choose the café features that are important to you.</p>
+        <h2>Your Café Preferences</h2>
+        <p>in this page user will chose preferences like price range, </p><p>location, 
+          amenities and it will be used for recommendation algorithms</p>
       </main>
 
-      <Footer />
     </div>
   );
 }

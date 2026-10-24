@@ -67,3 +67,33 @@ footer {
 footer p {
   font-size: 16px;
 }
+
+.page-content ul {
+  display: inline-block;
+  text-align: left;
+  padding-left: 20px;
+  margin: 0 auto;
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+  background-color: #640df000;
+}
+
+.navbar a {
+  color: rgb(250, 248, 248);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navbar a:hover {
+  color: #7b4b2a;
+}

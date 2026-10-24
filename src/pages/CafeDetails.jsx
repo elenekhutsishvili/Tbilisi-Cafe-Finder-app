@@ -4,11 +4,10 @@ import Footer from "../components/Footer";
 function CafeDetails() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Café Details</h1>
-        <p>View information, amenities, ratings, reviews, and location.</p>
+        <h2>Café Details</h2>
+        <p>For each cafe when you click cafe details it will reroute youu to this page</p>
       </main>
 
       <Footer />

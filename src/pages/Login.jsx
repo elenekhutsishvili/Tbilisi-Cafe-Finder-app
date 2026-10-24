@@ -4,14 +4,12 @@ import Footer from "../components/Footer";
 function Login() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Welcome Back</h1>
+        <h2>Login page</h2>
         <p>Log in to manage your cafés and preferences.</p>
       </main>
 
-      <Footer />
     </div>
   );
 }

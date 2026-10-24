@@ -4,14 +4,12 @@ import Footer from "../components/Footer";
 function Profile() {
   return (
     <div>
-      <Header />
 
       <main className="page-content">
-        <h1>Your Profile</h1>
-        <p>View and manage your account information.</p>
+        <h2>Your Profile</h2>
+        <p>After login/registration user will be directed to their profile page</p>
       </main>
 
-      <Footer />
     </div>
   );
 }

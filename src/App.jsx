@@ -1,6 +1,10 @@
 import { Routes, Route } from "react-router";
 import "./App.css";
 
+import Navbar from "./components/Navbar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Cafe from "./pages/Cafe";
 import CafeDetails from "./pages/CafeDetails";
@@ -13,17 +17,28 @@ import MapPage from "./pages/Map";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/cafe" element={<Cafe />} />
-      <Route path="/cafe-details" element={<CafeDetails />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/register" element={<Register />} />
-      <Route path="/favorites" element={<Favorites />} />
-      <Route path="/preference" element={<Preference />} />
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/map" element={<MapPage />} />
-    </Routes>
+    <>
+
+      <Header />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/cafe" element={<Cafe />} />
+        <Route path="/cafe-details" element={<CafeDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/favorites" element={<Favorites />} />
+        <Route path="/preference" element={<Preference />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/map" element={<MapPage />} />
+      </Routes>
+
+            <Navbar />
+
+
+      <Footer />
+    </>
   );
 }
 
