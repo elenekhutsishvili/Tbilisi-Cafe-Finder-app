@@ -22,7 +22,7 @@ Nino Khardziani
 ## Planned Technologies
 Frontend: React
 
-Backend: Flask
+Backend: Django + DRF
 
 Database: PostgreSQL
 
