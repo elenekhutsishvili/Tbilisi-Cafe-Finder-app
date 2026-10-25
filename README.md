@@ -65,8 +65,8 @@ npm --version
 Clone the repository and open the project folder:
 
 ```bash
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/elenekhutsishvili/Tbilisi-Cafe-Finder-app
+cd Tbilidi-Cafe-Finder-app
 ```
 
 Install the project dependencies:
