@@ -85,7 +85,7 @@ footer p {
   justify-content: center;
   gap: 25px;
   padding: 20px;
-  background-color: #640df000;
+  background-color: #667fdd;
 }
 
 .navbar a {
@@ -95,5 +95,5 @@ footer p {
 }
 
 .navbar a:hover {
-  color: #7b4b2a;
+  color: #180a65;
 }
