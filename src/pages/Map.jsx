@@ -1,15 +1,13 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import CafeMap from "../components/map/CafeMap";
+import "./Map.css";
 
 function MapPage() {
   return (
-    <div>
-
-      <main className="page-content">
-        <p>This page will display a map of cafés in Tbilisi.</p>
-      </main>
-
-    </div>
+    <main className="page-content map-page">
+      <h1>Explore Cafés in Tbilisi</h1>
+      <p>Discover cafés around Tbilisi using our interactive map.</p>
+      <CafeMap />
+    </main>
   );
 }
 
