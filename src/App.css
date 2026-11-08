@@ -84,19 +84,13 @@ footer p {
 .navbar {
   display: flex;
   justify-content: center;
-<<<<<<< HEAD
   align-items: center;
   flex-wrap: wrap;
   gap: 12px 20px;
   padding: 16px;
   max-width: 100%;
   box-sizing: border-box;
-  background-color: transparent;
-=======
-  gap: 25px;
-  padding: 20px;
   background-color: #667fdd;
->>>>>>> origin/main
 }
 
 .navbar a {
@@ -106,8 +100,7 @@ footer p {
 }
 
 .navbar a:hover {
-<<<<<<< HEAD
-  color: #7b4b2a;
+  color: #180a65;
 }
 
 .navbar ul {
@@ -132,7 +125,4 @@ footer p {
   .navbar ul {
     gap: 10px 14px;
   }
-=======
-  color: #180a65;
->>>>>>> origin/main
 }
