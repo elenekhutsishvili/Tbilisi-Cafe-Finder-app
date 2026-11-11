@@ -1,4 +1,4 @@
-
+﻿
 import unittest
 
 from scoring import (
@@ -8,6 +8,7 @@ from scoring import (
     calculate_match_percentage,
     score_cafe,
     recommend_cafes,
+    calculate_distance,
 )
 
 
@@ -296,6 +297,49 @@ class TestScoring(unittest.TestCase):
 
         self.assertEqual(result["status"], "scored")
         self.assertEqual(result["match_percentage"], 100.0)
+
+    def test_distance_same_location(self):
+        # Same coordinates should have zero distance
+        distance = calculate_distance(
+            41.7151, 44.8271,
+            41.7151, 44.8271
+        )
+
+        self.assertAlmostEqual(distance, 0.0, places=5)
+
+    def test_distance_symmetry(self):
+        # A to B should equal B to A
+        distance_ab = calculate_distance(
+            41.7151, 44.8271,
+            41.7200, 44.8350
+        )
+
+        distance_ba = calculate_distance(
+            41.7200, 44.8350,
+            41.7151, 44.8271
+        )
+
+        self.assertAlmostEqual(distance_ab, distance_ba, places=5)
+
+    def test_distance_known_value(self):
+        # One degree of latitude is approximately 111.2 km
+        distance = calculate_distance(
+            0, 0,
+            1, 0
+        )
+
+        self.assertAlmostEqual(distance, 111.19, places=2)
+
+    def test_distance_used_for_scoring(self):
+        # Calculate a real distance, then apply our scoring rules
+        distance = calculate_distance(
+            41.7151, 44.8271,
+            41.7200, 44.8350
+        )
+
+        points = score_distance(3, distance)
+
+        self.assertEqual(points, 20)
 
 if __name__ == "__main__":
     unittest.main()
