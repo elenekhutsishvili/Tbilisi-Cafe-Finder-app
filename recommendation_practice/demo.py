@@ -1,4 +1,4 @@
-
+﻿
 from scoring import (
     score_amenity,
     score_price,
@@ -127,8 +127,13 @@ print("\n=== PERSONALIZED RECOMMENDATIONS ===")
 
 results = recommend_cafes(user, cafes)
 
+
 for cafe in results:
-    print(f"{cafe['name']}: {cafe['match_percentage']}% match")
+    print(f"\n{cafe['name']}: {cafe['match_percentage']}% match")
+
+    for explanation in cafe["explanations"]:
+        print(f"  - {explanation}")
+
 
 
 # --------------------------------------------------

@@ -1,7 +1,9 @@
-
+﻿
 # TCF-65: Cafe Recommendation Scoring Algorithm
 # Tbilisi Cafe Finder
 
+from math import radians, sin, cos, sqrt, atan2
+from explanations import explain_recommendation
 
 def score_amenity(selection, cafe_has_amenity):
     """
@@ -209,10 +211,17 @@ def recommend_cafes(user_preferences, cafes):
         if result["status"] == "excluded":
             continue
 
+        
         recommendations.append({
             "name": cafe["name"],
-            "match_percentage": result["match_percentage"]
+            "match_percentage": result["match_percentage"],
+            "explanations": (
+                explain_recommendation(user_preferences, cafe)
+                if result["status"] == "scored"
+                else []
+            )
         })
+
 
     # Highest scores first; unscored cafes last
     recommendations.sort(
@@ -226,3 +235,33 @@ def recommend_cafes(user_preferences, cafes):
     )
 
     return recommendations
+
+def calculate_distance(user_lat, user_lon, cafe_lat, cafe_lon):
+    """
+    Calculate the straight-line distance between
+    a user and a cafe using GPS coordinates.
+
+    Returns distance in kilometers.
+    """
+    earth_radius_km = 6371.0
+
+    # Convert coordinates from degrees to radians
+    lat1 = radians(user_lat)
+    lon1 = radians(user_lon)
+    lat2 = radians(cafe_lat)
+    lon2 = radians(cafe_lon)
+
+    # Differences between coordinates
+    lat_difference = lat2 - lat1
+    lon_difference = lon2 - lon1
+
+    # Haversine formula
+    a = (
+        sin(lat_difference / 2) ** 2
+        + cos(lat1) * cos(lat2)
+        * sin(lon_difference / 2) ** 2
+    )
+
+    c = 2 * atan2(sqrt(a), sqrt(1 - a))
+
+    return earth_radius_km * c
