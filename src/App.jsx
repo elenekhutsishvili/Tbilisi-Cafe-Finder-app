@@ -18,6 +18,7 @@ import MapPage from "./pages/Map";
 function App() {
   return (
     <>
+      <Navbar />
 
       <Header />
 
@@ -34,12 +35,8 @@ function App() {
         <Route path="/map" element={<MapPage />} />
       </Routes>
 
-            <Navbar />
-
-
       <Footer />
     </>
   );
 }
-
 export default App;
