@@ -1,39 +1,45 @@
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 function Navbar() {
+  const navLinkClass = ({ isActive }) =>
+    isActive ? "nav-link active" : "nav-link";
+
   return (
     <nav className="navbar">
+    <Link to="/" className="navbar-brand">
+      <img src="/tcf-logo.png" alt="TCF logo" />
+      <span>TCF</span>
+    </Link>
+
       <ul>
         <li>
-          <Link to="/home">Home</Link>
+          <NavLink to="/cafe" className={navLinkClass}>
+            Browse Cafés
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/cafe">Browse Café</Link>
+          <NavLink to="/map" className={navLinkClass}>
+            Map
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/map">Map</Link>
+          <NavLink to="/login" className={navLinkClass}>
+            Log in
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/login">Login</Link>
+          <NavLink to="/register" className={navLinkClass}>
+            Sign up
+          </NavLink>
         </li>
 
         <li>
-          <Link to="/register">Sign Up</Link>
-        </li>
-
-        <li>
-          <Link to="/favorites">Favorites</Link>
-        </li>
-
-        <li>
-          <Link to="/preference">Preference</Link>
-        </li>
-
-        <li>
-          <Link to="/profile">Profile</Link>
+          <NavLink to="/profile" className={navLinkClass}>
+            Profile
+          </NavLink>
         </li>
       </ul>
     </nav>
