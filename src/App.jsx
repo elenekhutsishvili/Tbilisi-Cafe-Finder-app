@@ -1,3 +1,4 @@
+
 import { Routes, Route } from "react-router";
 import "./App.css";
 
@@ -14,11 +15,11 @@ import Favorites from "./pages/Favorites";
 import Preference from "./pages/Preference";
 import Profile from "./pages/Profile";
 import MapPage from "./pages/Map";
+import RecommendationPreview from "./pages/RecommendationPreview";
 
 function App() {
   return (
     <>
-
       <Header />
 
       <Routes>
@@ -32,11 +33,15 @@ function App() {
         <Route path="/preference" element={<Preference />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/map" element={<MapPage />} />
+
+        {/* Temporary preview for personalized recommendations */}
+        <Route
+          path="/recommendations-preview"
+          element={<RecommendationPreview />}
+        />
       </Routes>
 
-            <Navbar />
-
-
+      <Navbar />
       <Footer />
     </>
   );
