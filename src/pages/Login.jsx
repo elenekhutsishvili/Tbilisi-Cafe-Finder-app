@@ -1,16 +1,45 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Link } from "react-router";
 
 function Login() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // Backend login will be connected later.
+    console.log("Login submitted");
+  }
+
   return (
-    <div>
+    <main className="login-page">
+      <form className="login-form" onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Enter email address"
+          aria-label="Email address"
+          required
+        />
 
-      <main className="page-content">
-        <h2>Login page</h2>
-        <p>Log in to manage your cafés and preferences.</p>
-      </main>
+        <input
+          type="password"
+          placeholder="Enter password"
+          aria-label="Password"
+          required
+        />
 
-    </div>
+        <button type="submit" className="login-button">
+          Log in
+        </button>
+
+        <div className="login-options">
+          <Link to="/register" className="signup-button">
+            Sign up
+          </Link>
+
+          <Link to="/forgot-password" className="forgot-password">
+            Forgot password?
+          </Link>
+        </div>
+      </form>
+    </main>
   );
 }
 

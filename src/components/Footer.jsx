@@ -10,7 +10,12 @@ function Footer() {
             <span>TCF</span>
           </Link>
 
+
+          <Link to="/about-us" className="footer-about-link">
+
           <p>About us</p>
+
+          </Link>
         </div>
 
         <div className="footer-contact">

@@ -1,16 +1,55 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Link } from "react-router";
 
 function Register() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    // Backend registration will be connected later.
+    console.log("Registration submitted");
+  }
+
   return (
-    <div>
+    <main className="signup-page">
+      <form className="signup-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="enter username"
+          aria-label="Username"
+          required
+        />
 
-      <main className="page-content">
-        <h2>Create Your Account</h2>
-        <p>Page for registering for new users</p>
-      </main>
+        <input
+          type="email"
+          placeholder="enter email"
+          aria-label="Email address"
+          required
+        />
 
-    </div>
+        <input
+          type="password"
+          placeholder="enter your password"
+          aria-label="Password"
+          required
+        />
+
+        <input
+          type="password"
+          placeholder="repeat password"
+          aria-label="Repeat password"
+          required
+        />
+
+        <div className="signup-actions">
+          <Link to="/login" className="login-button-outline">
+            Log in
+          </Link>
+
+          <button type="submit" className="signup-button-filled">
+            Sign up
+          </button>
+        </div>
+      </form>
+    </main>
   );
 }
 

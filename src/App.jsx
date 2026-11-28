@@ -14,13 +14,12 @@ import Favorites from "./pages/Favorites";
 import Preference from "./pages/Preference";
 import Profile from "./pages/Profile";
 import MapPage from "./pages/Map";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
     <>
       <Navbar />
-
-      <Header />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -33,6 +32,7 @@ function App() {
         <Route path="/preference" element={<Preference />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
 
       <Footer />
