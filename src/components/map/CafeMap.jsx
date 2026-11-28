@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
-import { getCafesForMap } from "../../services/cafeService";
+import { getCafes } from "../../services/cafeService";
 
 import "leaflet/dist/leaflet.css";
 import "./CafeMap.css";
@@ -8,7 +8,7 @@ import { cafeMarkerIcon } from "./leafletIcons.js";
 
 const TBILISI_CENTER = [41.7151, 44.8271];
 
-export default function CafeMap() {
+export default function CafeMap({ selectedAmenities = [] }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [cafes, setCafes] = useState([]);
@@ -17,8 +17,10 @@ export default function CafeMap() {
     let active = true;
 
     async function loadData() {
+      setLoading(true);
+      setError(null);
       try {
-        const loadedCafes = await getCafesForMap();
+        const loadedCafes = await getCafes(selectedAmenities);
 
         if (!Array.isArray(loadedCafes)) {
           throw new Error("Invalid café data");
@@ -41,7 +43,7 @@ export default function CafeMap() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [selectedAmenities]);
 
   if (loading) {
     return <p role="status">Loading map...</p>;
